@@ -1,0 +1,61 @@
+{
+  "mcpServers": {
+    "atlassian": {
+      "type": "url",
+      "url": "https://mcp.atlassian.com/v1/mcp",
+      "note": "Jira + Confluence + Bitbucket. OAuth 2.1. Least privilege — review high-impact writes. SSE endpoint /sse deprecated mid-2026; use /mcp."
+    },
+
+    "aws-core": {
+      "command": "uvx",
+      "args": ["awslabs.core-mcp-server@latest"],
+      "note": "AWS API access. IAM scoped read-biased by default. Promote to write only inside an approved change."
+    },
+
+    "aws-terraform": {
+      "command": "uvx",
+      "args": ["awslabs.terraform-mcp-server@latest"],
+      "note": "Terraform plan/apply via MCP. Read-only by default. Write = explicit DevOps approval."
+    },
+
+    "aws-eks": {
+      "command": "uvx",
+      "args": ["awslabs.eks-mcp-server@latest"],
+      "note": "EKS cluster + workload operations. Scoped to read + describe by default."
+    },
+
+    "aws-cost": {
+      "command": "uvx",
+      "args": ["awslabs.cost-analysis-mcp-server@latest"],
+      "note": "Pre-deploy cost estimates + cost analysis. Read-only."
+    },
+
+    "neo4j": {
+      "command": "docker",
+      "args": [
+        "run", "-i", "--rm",
+        "-e", "NEO4J_URL",
+        "-e", "NEO4J_USERNAME",
+        "-e", "NEO4J_PASSWORD",
+        "-e", "NEO4J_READ_ONLY",
+        "mcp/neo4j-cypher"
+      ],
+      "env": {
+        "NEO4J_URL": "bolt://host.docker.internal:7687",
+        "NEO4J_USERNAME": "neo4j",
+        "NEO4J_PASSWORD": "${NEO4J_PASSWORD}",
+        "NEO4J_READ_ONLY": "true"
+      },
+      "note": "Neo4j graph (read-only by default). Set NEO4J_READ_ONLY=false only inside an approved migration with a rollback plan."
+    },
+
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "note": "PR/CI access for Backend, Frontend, DevOps, QA agents. Merge permission denied at agent tool level."
+    }
+  }
+}
