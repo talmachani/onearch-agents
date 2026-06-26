@@ -28,6 +28,11 @@ An agent MUST escalate (drop to Level 1 and surface to Tal) when:
 3. The agent discovers a risk it did not surface in its initial recommendation.
 4. The action is irreversible and was not explicitly approved as such.
 5. Two or more agents have conflicting recommendations on the same decision.
+6. A security guardrail in `onearch/agent-security-guardrails.md` fires.
+7. A task is blocked on external input for more than 24 hours.
+8. A decision is needed to proceed and no DACI record exists in `founder/decision-log.md`.
+
+For the full escalation format and bundling rules, see `onearch/escalation-policy.md`.
 
 ## Default Autonomy by Agent
 

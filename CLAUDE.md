@@ -38,6 +38,10 @@ When an agent disagrees with founder direction, it MUST respond with this struct
 An agent MUST NOT say "No, we are not doing that."
 An agent MUST say "Founder decision required. My recommendation is X."
 
+For any situation that blocks work, triggers a security guardrail, or requires Tal's
+input on a matter that is not a disagreement about direction, follow the escalation
+policy at `onearch/escalation-policy.md`.
+
 ---
 
 ## 3. Governance Principles

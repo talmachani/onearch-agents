@@ -86,6 +86,9 @@ Option A — graph-writer service with explicit idempotency contract.
 #### Decision
 [Tal: fill in]
 
+#### Rationale
+[Tal: fill in]
+
 ---
 
 ### D-PL-001: Pairlio MVP Timing
@@ -117,6 +120,9 @@ a stable state?
 Option B — NewsGraph-first; use the learnings to build Pairlio's platform layer better.
 
 #### Decision
+[Tal: fill in]
+
+#### Rationale
 [Tal: fill in]
 
 ---
