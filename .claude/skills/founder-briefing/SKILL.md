@@ -48,6 +48,7 @@ Invoke when:
 
 ## Recommended Focus
 [One sentence: where Tal should spend time today, given the above.]
+[If none: "Continue monitoring existing decisions and follow-ups."]
 ```
 
 7. If this is a pre-meeting briefing, append one additional section:
