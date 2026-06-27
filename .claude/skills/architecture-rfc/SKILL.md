@@ -29,7 +29,7 @@ If `ecosystem/rfc/` doesn't exist yet: `mkdir -p ecosystem/rfc`.
    - `ecosystem/adr/` — is there an existing ADR that covers this area?
    - `onearch/agent-security-guardrails.md` — does the proposal touch any security guardrail?
 
-2. **Write the RFC** at `ecosystem/rfc/RFC-NNN-<title>.md` using this exact template:
+2. **Draft the RFC** using this exact template. Output the full draft in your response. A session with file-write access will save it to `ecosystem/rfc/RFC-NNN-<title>.md` and commit it.
 
 ```markdown
 # RFC-[NNN]: [Title]
@@ -116,12 +116,13 @@ List steps in order. Flag irreversible steps explicitly.]
    >
    > **Founder Decision Required:** YES — approve RFC-[NNN] and authorize implementation, or redirect.
 
-5. **Commit the RFC file** to Git.
+5. **Hand off for commit.** Present the complete RFC draft to Tal. When Tal approves the draft, it will be saved to `ecosystem/rfc/RFC-NNN-<title>.md` and committed with:
 
-```bash
-git add ecosystem/rfc/RFC-NNN-<title>.md
-git commit -m "rfc: draft RFC-NNN — <short title> (pending Tal approval)"
 ```
+rfc: draft RFC-NNN — <short title> (pending Tal approval)
+```
+
+Note: Architect agents operate at Level 2 (drafts only). File creation and git commit are performed in the main session after Tal reviews the draft.
 
 ## Rules
 
