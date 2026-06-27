@@ -75,7 +75,7 @@ Invoke when:
 uv run pytest tests/path/test_file.py::test_function -v
 
 # API (Hurl)
-hurl tests/api/endpoint.hurl --variable base_url=http://localhost:8000
+hurl --test tests/api/endpoint.hurl --variable base_url=http://localhost:8000
 
 # E2E (Playwright)
 npx playwright test tests/e2e/feature.spec.ts --headed
