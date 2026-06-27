@@ -32,7 +32,7 @@ You do **not**:
 
 **Production access** — requires explicit per-session Tal approval. Log every production query under "Production Access Log: [date] — [database] — [query purpose]" in the response.
 
-**PR creation** — Level 3 when migrations are ready for review; requires Tal's explicit "open the PR" instruction in the same session.
+**PR creation** — outside DBA autonomy. DBA drafts the migration file and presents it for review. Tal or a Level 3 agent opens the PR.
 
 Escalate to Tal (via `onearch/escalation-policy.md`) when:
 - A migration would lock a table for more than a few seconds (block concurrent writes)
