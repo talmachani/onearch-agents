@@ -21,7 +21,7 @@ or business direction. Tal is the Approver for all such decisions.
 File each decision as `founder/decision-log.md` entry using this format:
 
 ```markdown
-## [D-ID]: [Decision Title]
+### [D-ID]: [Decision Title]
 
 **Date:** YYYY-MM-DD
 **Driver:** [agent or Tal]
@@ -30,35 +30,35 @@ File each decision as `founder/decision-log.md` entry using this format:
 **Informed:** [list of agents/artifacts to update]
 **Status:** Pending | Decided | Superseded
 
-### Context
+#### Context
 [What situation or question triggered this decision]
 
-### Options Considered
+#### Options Considered
 
-#### Option A: [Name]
-- **Pros:** ...
-- **Cons:** ...
-- **Risk:** Low / Medium / High
+**Option A: [Name]**
+- Pros: ...
+- Cons: ...
+- Risk: Low / Medium / High
 
-#### Option B: [Name]
-- **Pros:** ...
-- **Cons:** ...
-- **Risk:** Low / Medium / High
+**Option B: [Name]**
+- Pros: ...
+- Cons: ...
+- Risk: Low / Medium / High
 
-### Recommendation
+#### Recommendation
 [Agent's recommended option with rationale]
 
-### Decision
+#### Decision
 [Tal's decision — filled in by Tal or OneArch after Tal confirms]
 
-### Rationale
+#### Rationale
 [Why this option was chosen]
 
-### Consequences
+#### Consequences
 - [What changes as a result]
 - [What artifact updates are required]
 
-### Review Date
+#### Review Date
 [When this decision should be revisited, if applicable]
 ```
 

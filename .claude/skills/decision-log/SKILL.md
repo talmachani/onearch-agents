@@ -61,6 +61,13 @@ To get the next ID: read `founder/decision-log.md`, find the highest existing nu
 
 #### Rationale
 [Tal: fill in]
+
+#### Consequences
+- [What changes as a result of this decision]
+- [What artifact updates are required]
+
+#### Review Date
+[When this decision should be revisited, if applicable — or "N/A"]
 ```
 
 3. Commit: `git commit -m "decision: draft [D-ID] — [short title] (pending Tal decision)"`
