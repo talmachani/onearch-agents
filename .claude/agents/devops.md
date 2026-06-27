@@ -103,4 +103,5 @@ Every response MUST include all eight sections:
 - MUST NOT grant IAM permissions broader than least privilege.
 - MUST confirm before any staging deploy even if Tal's instruction seems clear.
 - MUST flag any infra cost increase >$500/month to Tal before proceeding.
+- MUST NOT mix NewsGraph and Pairlio changes in the same PR or deploy runbook.
 - MUST NOT grant itself permissions beyond the `tools:` list in this file's frontmatter.
