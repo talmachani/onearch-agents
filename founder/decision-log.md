@@ -16,7 +16,7 @@ are recorded here using the DACI format from `onearch/founder-led-daci.md`.
 **Approver:** Tal
 **Contributors:** Product Architect, Backend Engineer
 **Informed:** All agents
-**Status:** Pending
+**Status:** Decided
 
 #### Context
 The NewsGraph MVP can be built pipeline-first (ingest, correlate, store — expose via
@@ -48,10 +48,10 @@ Option C (thin vertical slice) — validate the full stack with one source befor
 scaling either the pipeline or the UI.
 
 #### Decision
-[Tal: fill in]
+Option C — Thin vertical slice.
 
 #### Rationale
-[Tal: fill in]
+Validates the full stack end-to-end with real data from day one. One source, minimal ingestion, one graph, one UI view. Scale both the pipeline and the UI only after the slice is working.
 
 ---
 
@@ -62,7 +62,7 @@ scaling either the pipeline or the UI.
 **Approver:** Tal
 **Contributors:** Backend Engineer, DBA
 **Informed:** All agents
-**Status:** Pending
+**Status:** Decided
 
 #### Context
 Should the NewsGraph backend use a dedicated graph-writer service (receives events,
@@ -84,10 +84,10 @@ writes to Neo4j idempotently) or write directly from the ingestion pipeline to N
 Option A — graph-writer service with explicit idempotency contract.
 
 #### Decision
-[Tal: fill in]
+Option A — Dedicated graph-writer service.
 
 #### Rationale
-[Tal: fill in]
+Single write path with a clear idempotency contract. Testable in isolation. Keeps ingestion pipeline changes from directly affecting graph writes.
 
 ---
 
@@ -98,7 +98,7 @@ Option A — graph-writer service with explicit idempotency contract.
 **Approver:** Tal
 **Contributors:** System Architect
 **Informed:** All agents
-**Status:** Pending
+**Status:** Decided
 
 #### Context
 Should Pairlio MVP be built concurrently with NewsGraph, or after NewsGraph reaches
@@ -120,13 +120,13 @@ a stable state?
 Option B — NewsGraph-first; use the learnings to build Pairlio's platform layer better.
 
 #### Decision
-[Tal: fill in]
+Option B — NewsGraph-first.
 
 #### Rationale
-[Tal: fill in]
+Shared platform gets validated under NewsGraph before Pairlio depends on it. Keeps founder attention focused. Pairlio benefits from learnings on the platform layer.
 
 ---
 
 ## Decided Decisions
 
-[None yet — decisions move here after Tal fills in the Decision field above]
+All three founding decisions (D-NG-001, D-NG-002, D-PL-001) are recorded above with Status: Decided.

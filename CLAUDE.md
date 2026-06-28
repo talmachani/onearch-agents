@@ -213,7 +213,9 @@ All canonical governance documents live in `onearch/`:
 | `onearch/artifact-lifecycle-policy.md` | Artifact ownership + lifecycle |
 | `onearch/operating-cadence.md` | Daily/weekly/initiative/release cadence |
 | `onearch/escalation-policy.md` | When and how to escalate to Tal |
+| `onearch/constitution.md` | Cross-reference index for all governance docs |
 | `founder/decision-log.md` | Running DACI decision log |
+| `founder/follow-up-log.md` | Follow-up tracker log (FU-NNN items) |
 | `founder/vision.md` | Product vision and direction |
 | `founder/roadmap-decisions.md` | Current roadmap + priority decisions |
 
