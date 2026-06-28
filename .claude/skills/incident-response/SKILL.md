@@ -24,7 +24,7 @@ Determine the incident level using `onearch/operating-cadence.md` Per Incident c
 | S1 Critical | Production down or data loss | Page Tal immediately |
 | S2 High | Major feature broken, degraded service | Alert Tal within 1 hour |
 | S3 Medium | Non-critical feature broken, workaround exists | Alert Tal in next morning status |
-| S4 Low | Minor issue, workaround available | Track in backlog |
+| S4 Low | Minor issue, workaround available | No Tal notification — create Jira bug |
 
 If severity is unclear, default to the higher level (err toward over-escalating to Tal).
 
@@ -81,7 +81,7 @@ Increment by 1 (start at 001 if none exist today).
 **Status:** Open
 **Start:** YYYY-MM-DD HH:MM UTC
 **Detected by:** Post-deploy health check / Monitoring alert / Tal report / User report
-**Incident Commander:** DevOps
+**Incident Commander:** DevOps (infra) / Backend Engineer (app) — [delete the inapplicable one]
 
 ## Impact
 
